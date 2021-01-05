@@ -1,0 +1,17 @@
+.container {
+  margin: 24px 24px 24px 24px;
+}
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.card-n-words {
+  width: 260px;
+  height: 125px;
+}
+
+.example-full-width {
+  width: 100%;
+}

@@ -1,0 +1,50 @@
+<app-main-nav>
+  <div class="container">
+    <form>
+      <div class="row">
+        <div class="col-sm-12">
+          <mat-form-field class="example-full-width">
+            <mat-label>Text to process</mat-label>
+            <textarea matInput [formControl]="inputText" rows="10" placeholder="Lorem ipsum"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <mat-card class="card-n-words">
+            <mat-card-content>
+              <h2>Highest frequency</h2>
+              <h4 style="margin-bottom: 0" *ngIf="frequency">Word: {{frequency.name}}</h4>
+              <h4 *ngIf="frequency">Frequency: {{frequency.value}}</h4>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <mat-card class="card-n-words">
+            <mat-card-content>
+              <h2>Most frequent N-Words</h2>
+              <mat-slider thumbLabel [formControl]="sliderValue" min="1" max="50" step="1"></mat-slider>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <mat-card class="card-n-words">
+            <mat-card-content>
+              <h2>Calculate frequency for</h2>
+              <mat-form-field>
+                <mat-label>
+                  Word
+                  <span class="ml-5" *ngIf="searchWordFrequency"> (count: {{ searchWordFrequency }})</span>
+                </mat-label>
+
+                <input matInput [formControl]="searchWord"/>
+              </mat-form-field>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </form>
+    <app-chart-vertical class="d-none d-md-block" [data]="data" (event)="onSelect($event)"></app-chart-vertical>
+    <app-n-words-list class="d-block d-md-none" [items]="data"></app-n-words-list>
+  </div>
+</app-main-nav>
