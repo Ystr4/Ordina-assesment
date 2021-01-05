@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {NO_ERRORS_SCHEMA} from '@angular/core';
 import {ChartVerticalComponent} from './components/chart-vertical/chart-vertical.component';
-import {NWordsListComponent} from './components/n-words-list/n-words-list.component';
+import {NWordsTableComponent} from './components/n-words-table/n-words-table.component';
 import {MainNavComponent} from './main-nav/main-nav.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -18,7 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {MatTableModule} from '@angular/material/table';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -26,7 +26,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         ChartVerticalComponent,
-        NWordsListComponent,
+        NWordsTableComponent,
         MainNavComponent,
       ],
       imports: [
@@ -45,7 +45,7 @@ describe('AppComponent', () => {
         MatSidenavModule,
         MatIconModule,
         MatListModule,
-        NgbModule
+        MatTableModule,
       ],
       schemas: [ NO_ERRORS_SCHEMA ],
     }).compileComponents();

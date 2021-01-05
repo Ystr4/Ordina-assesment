@@ -11,7 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
-import { NWordsListComponent } from './components/n-words-list/n-words-list.component';
+import { NWordsTableComponent } from './components/n-words-table/n-words-table.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,7 +25,7 @@ import { MatTableModule } from '@angular/material/table';
   declarations: [
     AppComponent,
     ChartVerticalComponent,
-    NWordsListComponent,
+    NWordsTableComponent,
     MainNavComponent,
   ],
   imports: [

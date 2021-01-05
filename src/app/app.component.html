@@ -36,7 +36,6 @@
                   Word
                   <span class="ml-5" *ngIf="searchWordFrequency"> (count: {{ searchWordFrequency }})</span>
                 </mat-label>
-
                 <input matInput [formControl]="searchWord"/>
               </mat-form-field>
             </mat-card-content>
@@ -45,6 +44,6 @@
       </div>
     </form>
     <app-chart-vertical class="d-none d-md-block" [data]="data" (event)="onSelect($event)"></app-chart-vertical>
-    <app-n-words-list class="d-block d-md-none" [items]="data"></app-n-words-list>
+    <app-n-words-table class="d-block d-md-none" [items]="data"></app-n-words-table>
   </div>
 </app-main-nav>
